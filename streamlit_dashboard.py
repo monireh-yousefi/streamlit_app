@@ -96,7 +96,7 @@ def main():
         if uploaded_file.name.endswith('.csv'):
             df = pd.read_csv(uploaded_file)
         else:
-            df = pd.read_excel(uploaded_file)
+            df = pd.read_excel(uploaded_file, index_col=0, sheet_name=None)
 
         # Display Data Overview
         st.sidebar.subheader("Data Overview")
